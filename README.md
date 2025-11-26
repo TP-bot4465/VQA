@@ -1,5 +1,6 @@
 # Visual Question Answering (VQA) System
 
+##  Giới thiệu (Overview)
 Dự án này xây dựng một hệ thống **Visual Question Answering (VQA)** hoàn chỉnh, có khả năng tự động trả lời các câu hỏi ngôn ngữ tự nhiên dựa trên nội dung hình ảnh đầu vào. Hệ thống kết hợp kỹ thuật Học sâu đa phương thức (Multimodal Deep Learning), tận dụng sức mạnh của **Convolutional Neural Networks (CNN)** cho xử lý ảnh và **Long Short-Term Memory (LSTM)** cho xử lý ngôn ngữ, được tăng cường bởi cơ chế **Attention**.
 
 ##  Tính năng nổi bật
