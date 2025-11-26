@@ -98,7 +98,7 @@ Hệ thống sẽ tự động sinh ra 2 file text trong quá trình tiền xử
   * `question_vocabs.txt`: Danh sách toàn bộ từ vựng xuất hiện trong tập câu hỏi.
   * `answer_vocabs.txt`: Danh sách các nhãn (classes) đầu ra mà mô hình có thể dự đoán.
 
-## 🛠 Cài đặt và Yêu cầu
+##  Cài đặt và Yêu cầu
 
 Dự án được phát triển bằng Python và PyTorch.
 
@@ -108,7 +108,7 @@ Dự án được phát triển bằng Python và PyTorch.
 pip install torch torchvision numpy matplotlib scikit-learn pillow
 ```
 
-## usage Hướng dẫn sử dụng
+## Hướng dẫn sử dụng
 
 ### 1\. Tiền xử lý dữ liệu (Preprocessing)
 
