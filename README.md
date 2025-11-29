@@ -53,19 +53,7 @@ Hệ thống hoạt động dựa trên cơ chế **Joint Embedding** (Nhúng k�
 
 Chúng tôi đã tiến hành thử nghiệm trên tập dữ liệu kiểm thử (Test Set) với các cấu hình mô hình khác nhau. Dưới đây là bảng tổng hợp kết quả:
 
-| STT | Mô hình (Backbone) | Cơ chế Attention | Accuracy (%) | F1-Score |
-|:---:|:-------------------|:----------------:|:------------:|:--------:|
-| 1   | **EfficientNetB3** | ✅ Có            | **70.15%** | **0.6340** |
-| 2   | ResNet50           | ✅ Có            | 68.20%       | 0.6105   |
-| 3   | MobileNetV2        | ✅ Có            | 65.40%       | 0.5821   |
-| 4   | Custom CNN         | ✅ Có            | 60.50%       | 0.5210   |
-| 5   | Custom CNN         | ❌ Không         | 58.10%       | 0.4980   |
-
-**Nhận xét:**
-
-  * **EfficientNetB3 + Attention** cho kết quả tốt nhất với độ chính xác trên 70%.
-  * Các mô hình Pretrained (ResNet, EfficientNet) vượt trội hơn hẳn so với mạng tự xây dựng.
-  * Việc áp dụng **Attention** giúp cải thiện đáng kể hiệu năng của mô hình Custom CNN (tăng từ 58.1% lên 60.5%).
+<img width="762" height="332" alt="image" src="https://github.com/user-attachments/assets/9082ccfb-049a-4bcb-ba63-3064ab86fb17" />
 
 -----
 
