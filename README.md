@@ -1,11 +1,9 @@
 # Visual Question Answering (VQA) with PyTorch
 
-  
-
+ 
 **TravelLens VQA** là một hệ thống trí tuệ nhân tạo đa phương thức (Multi-modal AI), có khả năng hiểu và trả lời các câu hỏi ngôn ngữ tự nhiên dựa trên nội dung của hình ảnh đầu vào. Dự án tập trung vào việc so sánh hiệu năng giữa các kiến trúc CNN Backbone khác nhau và đánh giá tác động của cơ chế Attention.
 
 -----
-
 ##  Giới thiệu
 
 Bài toán **Visual Question Answering (VQA)** yêu cầu máy tính phải kết hợp kiến thức từ hai lĩnh vực:
@@ -16,7 +14,6 @@ Bài toán **Visual Question Answering (VQA)** yêu cầu máy tính phải kế
 Hệ thống này nhận đầu vào là một bức ảnh và một câu hỏi, sau đó đưa ra câu trả lời chính xác nhất từ bộ từ điển đã học.
 
 -----
-
 ##  Tính năng nổi bật
 
   * **Đa dạng Backbone CNN:** Hỗ trợ nhiều mô hình trích xuất đặc trưng ảnh mạnh mẽ:
@@ -30,17 +27,12 @@ Hệ thống này nhận đầu vào là một bức ảnh và một câu hỏi,
 
 ##  Kiến trúc Mô hình
 
-Hệ thống hoạt động dựa trên cơ chế **Joint Embedding** (Nhúng kết hợp):
-
 1.  **Image Encoder:**
       * Ảnh đầu vào được đưa qua mạng CNN (ví dụ: ResNet50) để trích xuất Feature Map.
       * Đầu ra là một vector đặc trưng (Feature Vector).
 2.  **Question Encoder:**
       * Câu hỏi được mã hóa thành các chỉ số (tokens) và đưa qua lớp Embedding.
       * Mạng LSTM xử lý chuỗi và trả về vector ngữ cảnh.
-
-
-
 3.  **Fusion (Kết hợp):**
       * Hai vector đặc trưng (Ảnh & Câu hỏi) được kết hợp thông qua phép nhân từng phần tử (**Element-wise Multiplication**).
 4.  **Classifier:**
@@ -49,11 +41,20 @@ Hệ thống hoạt động dựa trên cơ chế **Joint Embedding** (Nhúng k�
 
 -----
 
-## 📊 Kết quả Thực nghiệm
+## Kết quả Thực nghiệm
 
 Chúng tôi đã tiến hành thử nghiệm trên tập dữ liệu kiểm thử (Test Set) với các cấu hình mô hình khác nhau. Dưới đây là bảng tổng hợp kết quả:
 
-<img width="762" height="332" alt="image" src="https://github.com/user-attachments/assets/9082ccfb-049a-4bcb-ba63-3064ab86fb17" />
+| Training Type       | Attention          | Model           | Accuracy | F1_Score |
+|---------------------|--------------------|-----------------|----------|----------|
+| Pretrained Model    | With Attention     | MobileNetV2     | 82.46    | 0.8074   |
+| Pretrained Model    | With Attention     | ResNet50        | 82.21    | 0.8084   |
+| Pretrained Model    | With Attention     | EfficientNet-B3 | 81.02    | 0.7972   |
+| Pretrained Model    | Without Attention  | MobileNetV2     | 82.54    | 0.8111   |
+| Pretrained Model    | Without Attention  | ResNet50        | 81.58    | 0.8008   |
+| Pretrained Model    | Without Attention  | EfficientNet-B3 | 81.08    | 0.8000   |
+| Build From Scratch  | With Attention     | -               | 79.58    | 0.7815   |
+| Build From Scratch  | Without Attention  | -               | 77.17    | 0.7604   |
 
 -----
 
